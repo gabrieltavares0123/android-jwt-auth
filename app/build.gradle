@@ -18,12 +18,12 @@ kotlin {
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
-        applicationId "com.plcoding.jwtauthktorandroid"
+        applicationId "io.github.gabriel.androidjwtauth"
         minSdk 21
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -31,6 +31,8 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+
+        buildConfigField "String", "BASE_URL", project.properties['BASE_URL']
     }
 
     buildTypes {
